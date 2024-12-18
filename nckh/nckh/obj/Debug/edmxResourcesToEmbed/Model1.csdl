@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="nckhModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="canh_bao">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Canhbao" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="tenp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="QL_PD">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tentb" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tenp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Cp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="nckhEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="canh_bao" EntityType="Self.canh_bao" />
+    <EntitySet Name="QL_PD" EntityType="Self.QL_PD" />
+  </EntityContainer>
+</Schema>

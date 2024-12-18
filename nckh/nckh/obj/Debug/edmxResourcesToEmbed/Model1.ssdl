@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="nckhModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="canh_bao">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Canhbao" Type="nvarchar(max)" />
+    <Property Name="tenp" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="QL_PD">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tentb" Type="varchar" MaxLength="50" />
+    <Property Name="Tenp" Type="varchar" MaxLength="50" />
+    <Property Name="Cp" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="nckhModelStoreContainer">
+    <EntitySet Name="canh_bao" EntityType="Self.canh_bao" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QL_PD" EntityType="Self.QL_PD" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

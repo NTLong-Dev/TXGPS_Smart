@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="nckhModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="canh_bao">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Canhbao" Type="nvarchar(max)" />
+          <Property Name="tenp" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="QL_PD">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tentb" Type="varchar" MaxLength="50" />
+          <Property Name="Tenp" Type="varchar" MaxLength="50" />
+          <Property Name="Cp" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="nckhModelStoreContainer">
+          <EntitySet Name="canh_bao" EntityType="Self.canh_bao" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="QL_PD" EntityType="Self.QL_PD" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="nckhModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="canh_bao">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Canhbao" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="tenp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="QL_PD">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tentb" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Tenp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Cp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="nckhEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="canh_bao" EntityType="Self.canh_bao" />
+          <EntitySet Name="QL_PD" EntityType="Self.QL_PD" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="nckhModelStoreContainer" CdmEntityContainer="nckhEntities">
+          <EntitySetMapping Name="canh_bao">
+            <EntityTypeMapping TypeName="nckhModel.canh_bao">
+              <MappingFragment StoreEntitySet="canh_bao">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Canhbao" ColumnName="Canhbao" />
+                <ScalarProperty Name="tenp" ColumnName="tenp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QL_PD">
+            <EntityTypeMapping TypeName="nckhModel.QL_PD">
+              <MappingFragment StoreEntitySet="QL_PD">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Tentb" ColumnName="Tentb" />
+                <ScalarProperty Name="Tenp" ColumnName="Tenp" />
+                <ScalarProperty Name="Cp" ColumnName="Cp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

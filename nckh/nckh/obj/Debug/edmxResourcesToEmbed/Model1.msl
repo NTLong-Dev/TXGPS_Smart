@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="nckhModelStoreContainer" CdmEntityContainer="nckhEntities">
+    <EntitySetMapping Name="canh_bao">
+      <EntityTypeMapping TypeName="nckhModel.canh_bao">
+        <MappingFragment StoreEntitySet="canh_bao">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Canhbao" ColumnName="Canhbao" />
+          <ScalarProperty Name="tenp" ColumnName="tenp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QL_PD">
+      <EntityTypeMapping TypeName="nckhModel.QL_PD">
+        <MappingFragment StoreEntitySet="QL_PD">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Tentb" ColumnName="Tentb" />
+          <ScalarProperty Name="Tenp" ColumnName="Tenp" />
+          <ScalarProperty Name="Cp" ColumnName="Cp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
